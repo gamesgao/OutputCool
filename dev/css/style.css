@@ -1,0 +1,21 @@
+html {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0)
+}
+
+body {
+  background: rgba(255, 255, 255, 0)
+}
+
+#app {
+  margin: 0;
+  padding: 0;
+  width: 310px;
+  height: auto;
+  /* -webkit-app-region: drag; */
+}
+

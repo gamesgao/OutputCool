@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Fake-Agar
+    </title>
+    <style>
+        .drag {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            -webkit-app-region: drag;
+        }
+    </style>
+</head>
+
+<!-- <body>
+    <div id="frame" style="-webkit-app-region: drag">
+        <p>wwww</p>
+    </div>
+    
+</body> -->
+
+<body>
+    <div id="app">
+        <div class="drag"></div>
+        <router-view :texts="texts" @change="passChange"></router-view>
+    </div>
+</body>
+
+<!-- <script src="./dist/build.js"></script> -->
+<script>
+    // You can also require other files to run in this process
+    require('./dist/build.js')
+    console.log(APP)
+    require('./renderer.js')
+
+</script>
+
+</html>
