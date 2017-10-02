@@ -42,17 +42,20 @@ export default {
 }
 
 .output-list-leave-active {
-  transition: all 1s;
+  position: absolute;
 }
 
-.output-list-enter,
+.output-list-enter{
+  opacity: 0;
+  transform: translateY(-30px);
+}
 .output-list-leave-to {
   opacity: 0;
   transform: translateY(30px);
 }
 
 
-.output-list-move {
-  transition: transform 1s;
-}
+/* .output-list-move {
+  transition: transform 0.3s;
+} */
 </style>

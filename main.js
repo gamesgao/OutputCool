@@ -49,7 +49,7 @@ function createWindow (socket) {
   // console.log(mainWindow.webContents)
   // mainWindow.webContents.executeJavaScript()
   ipc.once('connection', (event, arg) => {
-    event.sender.send('data', '新输入源')
+    event.sender.send('init', '新输入源')
     socket.on('data', (data) => {
       event.sender.send('data', data)
     })
