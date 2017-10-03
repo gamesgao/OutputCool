@@ -19,11 +19,18 @@ let app = new Vue({
   router,
   el: '#app',
   data: {
-    texts: []
+    texts: [],
+    show: true
   },
   methods: {
     passChange: function () {
       this.$emit('change')
+    },
+    toggleShow: function () {
+      this.show = !this.show
+      this.$nextTick(() => {
+        this.$emit('change')
+      })
     }
   }
 })

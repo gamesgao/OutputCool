@@ -33,7 +33,7 @@ function createWindow (socket) {
     transparent: true,
     movable: true,
     center: true,
-    resizable: true,
+    resizable: false,
     minimizable: false
   })
 

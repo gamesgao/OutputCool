@@ -3,15 +3,23 @@
 
 <head>
     <title>
-        Fake-Agar
+        OutputCool
     </title>
     <style>
         .drag {
+            display: inline-block;
             width: 20px;
             height: 20px;
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.5);
             -webkit-app-region: drag;
+        }
+
+        .nodrag {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -26,13 +34,14 @@
 <body>
     <div id="app">
         <div class="drag"></div>
-        <router-view :texts="texts" @change="passChange"></router-view>
+        <div class="nodrag" @dblclick="toggleShow"></div>
+        <router-view :texts="texts" @change="passChange" v-show="show"></router-view>
     </div>
 </body>
 
 <!-- <script src="./dist/build.js"></script> -->
 <script>
-    // You can also require other files to run in this process
+    // // You can also require other files to run in this process
     require('./dist/build.js')
     console.log(APP)
     require('./renderer.js')
